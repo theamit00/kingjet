@@ -118,6 +118,7 @@
 }
 
 .carousel__button {
+    display: none;
     z-index: 2;
     position: absolute;
     top: 50%;
