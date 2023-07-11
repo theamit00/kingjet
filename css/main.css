@@ -9,7 +9,7 @@
 }
 
 body{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -25,6 +25,7 @@ a{
 
 header{
     display: block;
+    position: relative;
     height: 82.5vh;
 } 
 
@@ -42,7 +43,6 @@ nav{
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 280px;
     align-items: center;
     padding:8px 20px;
     background-color: #fff;
@@ -50,7 +50,7 @@ nav{
 }
 
 nav img{
-    width: 175px;
+    width: 40%;
 }
 
 .nav-links{
@@ -149,14 +149,18 @@ nav img{
 /* MAIN START */
 
 .section{
+    display: block;
     height: 60vh;
     width: 100%;
+    position: relative;
 }
 
 /* SHOWCASE SECTION START */
 
 .showCase{
     background-color: #DBFAD7;
+    display: block;
+    position: relative;
 }
 
 .showCase__container{
@@ -168,7 +172,6 @@ nav img{
 .showCase .showCase__btnNav{
 
     display: flex;
-    height: fit-content;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -229,6 +232,10 @@ nav img{
     scale: 0;
     position: absolute;
     transition: all 0.2s ease-in-out;
+}
+
+.showCase__slides img{
+    width: 100%;
 }
 
 .showCase__track .active{
@@ -766,3 +773,31 @@ nav img{
 }
 
 
+@media screen and (max-width : 700px) { 
+
+    /* HEADER */
+
+    /* NAV START */
+
+
+    .nav-links{
+        display: none;
+    }
+
+    nav img{
+        width: 45%;
+    }
+
+
+
+    /* MAIN SECTION */
+
+    .showCase__container{
+        width: 100%;
+    }
+
+    .showCase .showCase__btnNav{
+        flex-direction: column;
+    }
+
+}
