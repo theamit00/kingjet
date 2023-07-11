@@ -795,7 +795,7 @@ main{
     /* HEADER */
 
     header{
-        height: 40.5vh;
+        height: 33vh;
     }
 
     /* NAV START */
@@ -811,14 +811,14 @@ main{
 
 
     .section{
-        height: 90vh;
-        padding-block: 60px;
+        height: 75vh;
+        padding: 25px 0px;
     }
 
     /* MAIN SECTION */
 
     .showCase{
-        height: 70vh;
+        height: 60vh;
         padding-block: 20px;
     }
 
@@ -880,7 +880,7 @@ main{
 
     .deals{
         padding: 60px 0px;
-        height: 100vh;
+        height: 80vh;
     }
 
     .deals__container{
