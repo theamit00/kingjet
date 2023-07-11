@@ -11,6 +11,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 a{
@@ -148,6 +149,10 @@ nav img{
 
 /* MAIN START */
 
+main{
+    width: 100%;
+}
+
 .section{
     display: block;
     height: 60vh;
@@ -167,6 +172,7 @@ nav img{
     padding: 20px;
     margin: auto;
     width: 60%;
+    height: 100%;
 }
 
 .showCase .showCase__btnNav{
@@ -368,6 +374,7 @@ nav img{
 .deals__container{
 
     width: 65%;
+    position: relative;
     height: 100%;
     margin: auto;
 }
@@ -484,7 +491,7 @@ nav img{
 .deals__card .deals__cardImg img{
 
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 
 }
 
@@ -633,12 +640,15 @@ nav img{
 
 .footer__links--row{
 
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    display: flex;
+    justify-content: space-between;
     color: #fff;
 }
 
 .footer__links--col{
+    flex: 31%;
     padding: 0px 10px;
 }
 
@@ -739,8 +749,7 @@ nav img{
 }
 
 .footer__copyAndPay--col{
-
-    width: 45%;
+    flex: 45%;
 }
 
 .footer__copyCol--content{
@@ -761,21 +770,33 @@ nav img{
 
 .footer__payCol--content ul{
     display: flex;
+    align-items: baseline;
 }
 
 .footer__payCol--content ul li{
     list-style: none;
     margin-left: 15px;
+    position: relative;
 }
 
 .footer__payCol--content ul li img{
+    display: block;
     width: 30px;
 }
 
 
 @media screen and (max-width : 700px) { 
 
+    body{
+
+        overflow-x: hidden;
+    }
+
     /* HEADER */
+
+    header{
+        height: 40.5vh;
+    }
 
     /* NAV START */
 
@@ -789,8 +810,17 @@ nav img{
     }
 
 
+    .section{
+        height: 90vh;
+        padding-block: 60px;
+    }
 
     /* MAIN SECTION */
+
+    .showCase{
+        height: 70vh;
+        padding-block: 20px;
+    }
 
     .showCase__container{
         width: 100%;
@@ -798,6 +828,152 @@ nav img{
 
     .showCase .showCase__btnNav{
         flex-direction: column;
+        margin-bottom: 40px;    
     }
 
+    .showCase .showCase__btnNav .showCase__btn{
+        margin-bottom: 5px;
+        line-height: 0px;
+    }
+
+    .showCase .showCase__track {
+        padding: 40px 0px 30px;
+        /* h */
+    }
+
+    /* CARD SECTION */
+
+
+    .cards__container{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .card{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .card__content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card__content .card__content--btn{
+        left: 0;
+        align-self: flex-end;
+    }
+
+    .card__image{
+
+        width: 100%;
+    }
+
+    .card-3 .card{
+        flex-direction: column-reverse;
+    }
+
+
+
+    /* DEAL SECTION START */
+
+    .deals{
+        padding: 60px 0px;
+        height: 100vh;
+    }
+
+    .deals__container{
+        width: 100%;
+    }
+
+    .deals__container .deals__cardRow{
+        justify-content: center;
+    }
+
+    .deals__cardRow .deals__cardContainer{
+        display: block;
+        position: absolute;
+        width: 70%;
+    }
+
+    .deals__card .deals__cardImg {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .deals__card .deals__cardImg img{
+        width : 80%
+    }
+
+    .deals__card .deals__cardContent {
+        padding: 20px 15px;
+    }
+
+    .deals__heading .deals__heading--title{
+        font-size: 21px;
+        width: 80%;
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .deals__heading .deals__heading--desc{
+        font-size: 15px;
+        text-align: center;
+        padding: 0px 20px;
+        margin: 0px;
+    }
+
+
+    /* FOOTER START */
+
+    .footer{
+
+        padding: 0px;
+    }
+
+    .footer__container{
+        width: 93%;
+    }
+
+    .footer__links--row{
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__links--col{
+        flex: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer__copyAndPay{
+        padding-bottom: 10px;
+    }
+
+    .footer__copyAndPay--row{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer__copyAndPay--col {
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer__copyCol--content{
+        margin-bottom: 18px;
+    }
+
+    .footer__payCol--content ul {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer__payCol--content ul li{
+        margin-left: 5px;
+    }
 }
